@@ -1,0 +1,92 @@
+@mixin anyHover() {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin notLast() {
+  &:not(:last-child) {
+    @content;
+  }
+}
+
+@mixin notFirst() {
+  &:not(:first-child) {
+    @content;
+  }
+}
+
+@mixin lineClamp($value) {
+  display: -webkit-box;
+  -webkit-line-clamp: $value;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin styledPlaceholder($color, $fontSize: inherit, $lineHeight: normal) {
+  &:-moz-placeholder {
+    color: $color;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+  }
+  &::-moz-placeholder {
+    color: $color;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+  }
+}
+
+@mixin hidePlaceholder($time: 300, $effect: ease) {
+  &::-webkit-input-placeholder {
+    opacity: 1;
+    transition: opacity #{$time} + ms $effect;
+  }
+  &::-moz-placeholder {
+    opacity: 1;
+    transition: opacity #{$time} + ms $effect;
+  }
+  &:-moz-placeholder {
+    opacity: 1;
+    transition: opacity #{$time} + ms $effect;
+  }
+  &:-ms-input-placeholder {
+    opacity: 1;
+    transition: opacity #{$time} + ms $effect;
+  }
+  &:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity #{$time} + ms $effect;
+  }
+  &:focus::-moz-placeholder {
+    opacity: 0;
+    transition: opacity #{$time} + ms $effect;
+  }
+  &:focus:-moz-placeholder {
+    opacity: 0;
+    transition: opacity #{$time} + ms $effect;
+  }
+  &:focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: opacity #{$time} + ms $effect;
+  }
+}
+
+@mixin pseudocell($type, $pos: absolute) {
+  &::#{$type} {
+    content: '';
+    position: $pos;
+    @content;
+  }
+}
