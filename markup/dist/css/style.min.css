@@ -320,7 +320,7 @@ a.btn.mix:hover:after {
   background: #f0f0f0;
 }
 
-.header {
+.site-wrapper {
   max-width: 1170px;
   width: 100%;
   margin: auto;
@@ -354,15 +354,14 @@ a.btn.mix:hover:after {
   height: 52px;
   background: #E6E6E6;
   width: 996px;
-  background-size: 996px 100%; /* Фиксированная ширина фона 996px */
+  background-size: 996px 100%;
 }
 .subs .title {
   padding-left: 28px;
-  font-family: Noto Serif;
+  font-family: "Noto Serif";
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
-  letter-spacing: 0%;
 }
 .subs .txt {
   margin-bottom: 32px;
@@ -370,7 +369,6 @@ a.btn.mix:hover:after {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0%;
 }
 
 .btn {
@@ -415,14 +413,11 @@ a.btn.mix:hover:after {
   margin-top: 80px;
 }
 .latest-wrap .latest {
-  display: flex;
-  align-items: center;
-  font-family: Noto Serif;
+  font-family: "Noto Serif";
   font-weight: 600;
   font-size: 24px;
-  line-height: 32px;
-  letter-spacing: 2%;
   text-transform: uppercase;
+  letter-spacing: 2%;
 }
 
 .title2 {
@@ -442,7 +437,7 @@ a.btn.mix:hover:after {
 .title2 span {
   flex-grow: 1; /* Распределяет доступную ширину равномерно между элементами */
   display: flex;
-  justify-content: center; /* Центрирует текст внутри */
+  justify-content: center;
   align-items: center;
   height: 50px;
 }
@@ -625,4 +620,89 @@ a.btn.mix:hover:after {
   line-height: 30px;
   letter-spacing: 5%;
   text-transform: uppercase;
+}
+
+.helpful-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+.helpful-title .font-helpful {
+  font-family: Noto Serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+}
+
+.helpful-wrapper {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.container-helpful {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 270px;
+  max-height: 442px;
+}
+.container-helpful img.helpful-img {
+  width: 100%;
+}
+.container-helpful .helpful-font-title {
+  font-family: "Noto Serif";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0%;
+}
+.container-helpful .helpful-font {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+.container-helpful .helpful-money {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+}
+
+.background-helpful {
+  background-color: #E6E6E6;
+  margin-top: 40px;
+  height: 214px;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.background-helpful .font-background-helpful-title {
+  max-width: 684px;
+  max-height: 98px;
+  font-family: Noto Serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.background-helpful .font-background-helpful {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.background-helpful .email-helpful {
+  border-bottom: 1px solid black;
 }
